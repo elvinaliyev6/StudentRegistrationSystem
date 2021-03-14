@@ -32,6 +32,14 @@ public class Main {
                 StudentUtil.printAllRegisteredStudents();
             } else if (menu == 3) {
                 StudentUtil.findStudentsAndPrint();
+            } else if (menu == 4) {
+                StudentUtil.printAllRegisteredStudents();
+                int i = InputUtil.requireNumber("Nechenci adamda update etmek isteyirsiniz?");
+                
+                System.out.println("yeni melumatlari daxil edin: ");
+                Student s = StudentUtil.fillStudent();
+                Config.students[i] = s;
+
             }
 
         }

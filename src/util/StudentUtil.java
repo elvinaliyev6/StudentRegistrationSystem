@@ -32,7 +32,7 @@ public class StudentUtil {
             }
 
             Student st = Config.students[i];
-            System.out.println(st.getFullInfo());
+            System.out.println((i+1)+"."+st.getFullInfo());
         }
     }
 

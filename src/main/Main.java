@@ -5,9 +5,8 @@
  */
 package main;
 
-import beans.Student;
 import util.InputUtil;
-import util.StudentUtil;
+import util.MenuUtil;
 
 /**
  *
@@ -24,24 +23,10 @@ public class Main {
             menu = InputUtil.requireNumber("what do you want to do?"
                     + "\n1.Register student"
                     + "\n2.Show all students"
-                    + "\n3.Find students");
-
-            if (menu == 1) {
-                StudentUtil.registerStudents();
-            } else if (menu == 2) {
-                StudentUtil.printAllRegisteredStudents();
-            } else if (menu == 3) {
-                StudentUtil.findStudentsAndPrint();
-            } else if (menu == 4) {
-                StudentUtil.printAllRegisteredStudents();
-                int i = InputUtil.requireNumber("Nechenci adamda update etmek isteyirsiniz?");
-                
-                System.out.println("yeni melumatlari daxil edin: ");
-                Student s = StudentUtil.fillStudent();
-                Config.students[i] = s;
-
-            }
-
+                    + "\n3.Find students"
+                    + "\n4.Update student"
+                    + "\n5.Exit");
+            MenuUtil.processMenu(menu);
         }
     }
 
